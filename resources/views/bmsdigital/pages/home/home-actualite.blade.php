@@ -11,57 +11,24 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="single-latest-item">
-                    <div class="single-latest-image">
-                        <a href="blog-details.html"><img src="img/latest/1.jpg" alt=""></a>
-                    </div>
-                    <div class="single-latest-text">
-                        <h3><a href="blog-details.html">Learn English in ease</a></h3>
-                        <div class="single-item-comment-view">
-                            <span><i class="zmdi zmdi-calendar-check"></i>25 jun 2050</span>
-                            <span><i class="zmdi zmdi-eye"></i>59</span>
-                            <span><i class="zmdi zmdi-comments"></i>19</span>
+            @foreach ($actualites as $item)
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-latest-item">
+                        <div class="single-latest-image">
+                            <a href="{{ route('bmsdigital.actualites.show',$item) }}"><img src="{{ Voyager::image($item->image) }}" style="width: 100p%; height:250px; object-fit:cover" alt=""></a>
                         </div>
-                        <p>There are many variaons of passages of Lorem Ipsuable, amrn in some by injected humour, </p>
-                        <a href="blog-details.html" class="button-default">Read More</a>
+                        <div class="single-latest-text">
+                            <h3><a href="{{ route('bmsdigital.actualites.show',$item) }}">{{ $item->titre }}</a></h3>
+                            <div class="single-item-comment-view">
+                                <span><i class="zmdi zmdi-calendar-check"></i>{{ Helpers::dateEnFrancais($item->created_at) }}</span>
+                            </div>
+                            <p>{!! Helpers::cutText($item->contenu, 150) !!}</p>
+                            <a href="{{ route('bmsdigital.actualites.show',$item) }}" class="button-default">En savoir plus</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="single-latest-item">
-                    <div class="single-latest-image">
-                        <a href="blog-details.html"><img src="img/latest/2.jpg" alt=""></a>
-                    </div>
-                    <div class="single-latest-text">
-                        <h3><a href="blog-details.html">Learn English in ease</a></h3>
-                        <div class="single-item-comment-view">
-                            <span><i class="zmdi zmdi-calendar-check"></i>25 jun 2050</span>
-                            <span><i class="zmdi zmdi-eye"></i>59</span>
-                            <span><i class="zmdi zmdi-comments"></i>19</span>
-                        </div>
-                        <p>There are many variaons of passages of Lorem Ipsuable, amrn in some by injected humour, </p>
-                        <a href="blog-details.html" class="button-default">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="single-latest-item">
-                    <div class="single-latest-image">
-                        <a href="blog-details.html"><img src="img/latest/4.jpg" alt=""></a>
-                    </div>
-                    <div class="single-latest-text">
-                        <h3><a href="blog-details.html">Learn English in ease</a></h3>
-                        <div class="single-item-comment-view">
-                            <span><i class="zmdi zmdi-calendar-check"></i>25 jun 2050</span>
-                            <span><i class="zmdi zmdi-eye"></i>59</span>
-                            <span><i class="zmdi zmdi-comments"></i>19</span>
-                        </div>
-                        <p>There are many variaons of passages of Lorem Ipsuable, amrn in some by injected humour, </p>
-                        <a href="blog-details.html" class="button-default">Read More</a>
-                    </div>
-                </div>
-            </div>
+
+            @endforeach
         </div>
     </div>
 </div>

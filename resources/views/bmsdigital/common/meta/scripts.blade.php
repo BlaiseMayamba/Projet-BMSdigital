@@ -6,3 +6,4 @@
  <script src="{{ asset('js/ajax-mail.js') }}"></script>
  <script src="{{ asset('js/plugins.js') }}"></script>
  <script src="{{ asset('js/main.js') }}"></script>
+ <script src="{{ asset('js/toastr.js') }}"></script>

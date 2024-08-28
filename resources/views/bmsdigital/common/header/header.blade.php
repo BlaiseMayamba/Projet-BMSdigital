@@ -1,5 +1,5 @@
 <header>
-    @include('bmsdigital.common.header.sections.topbar')
+    {{-- @include('bmsdigital.common.header.sections.topbar') --}}
     <div class="header-logo-menu sticker">
         <div class="container">
             <div class="row">

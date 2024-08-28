@@ -14,7 +14,8 @@ class FormationController extends Controller
      */
     public function index()
     {
-        //
+        $formations = Formation::all();
+        return view('bmsdigital.pages.formations.formations',compact('formations'));
     }
 
     /**
@@ -44,9 +45,11 @@ class FormationController extends Controller
      * @param  \App\Models\Formation  $formation
      * @return \Illuminate\Http\Response
      */
-    public function show(Formation $formation)
+    public function show($formation)
     {
-        //
+        $formation = Formation::where('slug',$formation)->get()->first();
+        $others = Formation::orderBy('created_at')->where('slug','!=',$formation)->get()->take(8);
+        return view('bmsdigital.pages.formations.formation',compact('formation','others'));
     }
 
     /**

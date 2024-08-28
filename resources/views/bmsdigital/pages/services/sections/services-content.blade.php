@@ -12,55 +12,34 @@
             </div>
         </div>
         <div class="row">
-            @for ($i = 1; $i<=6; $i++)
+            @foreach ($services as $service)
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="single-item mb-50">
                         <div class="single-item-image overlay-effect">
-                            <a href="service"><img src="img/course/1.jpg" alt=""></a>
-                            <div class="courses-hover-info">
-                                <div class="courses-hover-action">
-                                    <div class="courses-hover-thumb">
-                                        <img src="img/teacher/1.png" alt="small images">
-                                    </div>
-                                    <h4><a href="#">Derek Spafford</a></h4>
-                                    <span class="crs-separator">/</span>
-                                    <p>Professor</p>
-                                </div>
-                            </div>
+                            <a href="{{ route('bmsdigital.services.show', $service) }}"><img src="{{ Voyager::image($service->image) }}" style="height: 200px;width:100%;object-ft:cover" alt=""></a>
                         </div>
                         <div class="single-item-text">
-                            <h4><a href="service">Photoshop CC 2017</a></h4>
-                            <p>There are many variations of sages of Lorem Ipsum available, but the mrity have suffered alteration in some orm.</p>
+                            <h4><a href="{{ route('bmsdigital.services.show', $service) }}">{{ $service->titre }}</a></h4>
+                            <p>{!! Helpers::cutText($service->contenu, 200) !!}.</p>
                             <div class="single-item-content">
-                            <div class="single-item-comment-view">
+                            {{-- <div class="single-item-comment-view">
                                 <span><i class="zmdi zmdi-accounts"></i>59</span>
                                 <span><i class="zmdi zmdi-favorite"></i>19</span>
-                            </div>
+                            </div> --}}
                             <div class="single-item-rating">
-                                <i class="zmdi zmdi-star"></i>
-                                <i class="zmdi zmdi-star"></i>
-                                <i class="zmdi zmdi-star"></i>
-                                <i class="zmdi zmdi-star"></i>
-                                <i class="zmdi zmdi-star-half"></i>
+                               <a href="{{ route('bmsdigital.services.show', $service) }}" class="btn btn-primary btn-sm text-white">En savoir plus</a>
                             </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-            @endfor
+            @endforeach
 
         <div class="row mb-4" >
             <div class="col-md-12">
                 <div class="pagination-content number">
-                    <ul class="pagination">
-                        <li><a href="#"><i class="zmdi zmdi-chevron-left"></i></a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li class="current"><a href="#"><i class="zmdi zmdi-chevron-right"></i></a></li>
-                    </ul>
+                    {{-- {{ $services->links('pagination::bootstrap-4') }} --}}
                 </div>
             </div>
         </div>

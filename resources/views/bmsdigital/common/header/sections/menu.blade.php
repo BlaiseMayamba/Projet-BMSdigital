@@ -11,7 +11,7 @@
         <li><a href="{{ route('bmsdigital.formations.index') }}">Formations</a></li>
         <li><a href="{{ route('bmsdigital.contacts.index') }}">Contact</a></li>
         <li>
-            <div class="slider-btn-1">
+            <div class="slider-btn-1 d-md-none">
                 <a class="button-default" href="{{ route('login') }}">Se connecter</a>
             </div>
         </li>

@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Contact as MailContact;
+
+
 
 class ContactController extends Controller
 {
@@ -14,7 +18,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        return view('bmsdigital.pages.contacts.contact');
     }
 
     /**
@@ -35,7 +39,16 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $contact = new Contact();
+        $contact->nom = $request->nom;
+        $contact->telephone = $request->telephone;
+        $contact->email = $request->email;
+        $contact->motif = $request->motif;
+        $contact->contenu = $request->message;
+        $contact->save();
+
+        Mail::to('contact@bmsacademia.com')->send(new MailContact($contact));
+        return redirect()->route('bmsdigital.accueil')->with('success', 'Message envoyé avec succès');
     }
 
     /**

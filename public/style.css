@@ -6,10 +6,10 @@
     Version: 1.0
 
 -----------------------------------------------------------------------------------
-    
+
     CSS INDEX
     ===================
-	
+
     1. Theme Default CSS (body, link color, section etc)
     2. Header CSS
         2.1 Header Top
@@ -44,7 +44,7 @@
     23. About Page
     24. Team Details Page
     25. Login Register Page CSS
-    26. 404 Page CSS 
+    26. 404 Page CSS
     27. Scrollup
 
 -----------------------------------------------------------------------------------*/
@@ -889,7 +889,10 @@ mark {
 	z-index: 8
 }
 .logo {
-	padding: 15px 0;
+	/* padding: 15px 0; */
+    display: flex;
+    height: 100%;
+    align-items: center;
 }
 .header-logo-menu.stick .logo {
 	padding: 15px 0;
@@ -1514,7 +1517,7 @@ mark {
 /*----------------------------------------*/
 
 .about-area h3 {
-	font-size: 32px;
+	/* font-size: 32px; */
 	margin-bottom: 20px;
 	padding-top: 22px;
 	color: #1F3971;
@@ -3339,7 +3342,7 @@ mark {
 /*----------------------------------------*/
 
 .breadcrumb-banner-area {
-	background: rgba(0, 0, 0, 0) url("img/banner/8.jpg") no-repeat scroll 0 0;
+	background: rgba(0, 0, 0, 0) url("banner.jpg") no-repeat scroll 0 0;
 	color: #ffffff;
 	padding: 110px 0;
 	position: relative;
@@ -3904,7 +3907,7 @@ h4.small-title {
 	margin: 0 auto;
 }
 /*-------------------------
-     15. Wishlist Page CSS 
+     15. Wishlist Page CSS
 ---------------------------*/
 
 .table-content table {
@@ -3973,7 +3976,7 @@ h4.small-title {
 	color: #fff;
 }
 /*-------------------------
-     16. Cart Page CSS 
+     16. Cart Page CSS
 ---------------------------*/
 
 .edubuzz-product-quantity input {
@@ -4077,7 +4080,7 @@ h4.small-title {
 	border-color: #FFAE27;
 }
 /*-------------------------
-     17. Checkout Page CSS 
+     17. Checkout Page CSS
 ---------------------------*/
 
 .coupon-accordion h3 {
@@ -4572,10 +4575,10 @@ thead {
 }
 .team-content ul li a::after {
     content: ',';
-    margin-right: 1px; 
+    margin-right: 1px;
 }
 .team-content ul li a:last-child::after {
-    display: none; 
+    display: none;
 }
 .team-content ul li span:first-child {
 	font-weight: 600;
@@ -4607,15 +4610,15 @@ thead {
 	margin-right: 10px;
 }
 .team-content .social a:last-child {
-  margin-right: 0; 
+  margin-right: 0;
 }
 .team-content .social a:hover {
-  opacity: 0.9; 
+  opacity: 0.9;
 }
 .team-content .social a i {
   display: block;
   font-size: 14px;
-  line-height: 20px; 
+  line-height: 20px;
 }
 .team-content .social a.facebook {
   background-color: #4867AA;
@@ -4624,57 +4627,57 @@ thead {
   background-color: #1DA1F2;
 }
 .team-content .social a.linkedin {
-  background-color: #007BB6; 
+  background-color: #007BB6;
 }
 .team-content .social a.google {
   background-color: #DD5144;
 }
 .team-content .social a.instagram {
-  background-color: #B23A94; 
+  background-color: #B23A94;
 }
 .team-content .social a.pinterest {
-  background-color: #BD081B; 
+  background-color: #BD081B;
 }
 .team-content .social a.skype {
-  background-color: #00A9F0; 
+  background-color: #00A9F0;
 }
 .team-content .social a.tumblr {
-  background-color: #36465D; 
+  background-color: #36465D;
 }
 .team-content .social a:nth-child(2) {
   -webkit-transition-delay: 0.15s;
   -o-transition-delay: 0.15s;
-  transition-delay: 0.15s; 
+  transition-delay: 0.15s;
 }
 .team-content .social a:nth-child(3) {
   -webkit-transition-delay: 0.3s;
   -o-transition-delay: 0.3s;
-  transition-delay: 0.3s; 
+  transition-delay: 0.3s;
 }
 .team-content .social a:nth-child(4) {
   -webkit-transition-delay: 0.45s;
   -o-transition-delay: 0.45s;
-  transition-delay: 0.45s; 
+  transition-delay: 0.45s;
 }
 .team-content .social a:nth-child(5) {
   -webkit-transition-delay: 0.6s;
   -o-transition-delay: 0.6s;
-  transition-delay: 0.6s; 
+  transition-delay: 0.6s;
 }
 .team-content .social a:nth-child(6) {
   -webkit-transition-delay: 0.75s;
   -o-transition-delay: 0.75s;
-  transition-delay: 0.75s; 
+  transition-delay: 0.75s;
 }
 .team-content .social a:nth-child(7) {
   -webkit-transition-delay: 0.9s;
   -o-transition-delay: 0.9s;
-      transition-delay: 0.9s; 
+      transition-delay: 0.9s;
 }
 .team-content .social a:nth-child(8) {
   -webkit-transition-delay: 1.05s;
   -o-transition-delay: 1.05s;
-  transition-delay: 1.05s; 
+  transition-delay: 1.05s;
 }
 /*---------------------------------
     Gallery Page Area CSS
@@ -4797,7 +4800,7 @@ input.checkbox {
 	color: #fff;
 }
 /*-------------------------
-     26. 404 Page CSS 
+     26. 404 Page CSS
 ---------------------------*/
 .error-text > h1 {
 	font-size: 200px;

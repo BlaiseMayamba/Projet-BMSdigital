@@ -2,56 +2,13 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FormationController;
+use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\ActualitesController;
 use Illuminate\Support\Facades\Route;
 use TCG\Voyager\Facades\Voyager;
-
-
-
-Route::get('/', function () {
-    return view('bmsdigital.pages.home.index');
-});
-
-Route::get('qui-sommes-nous', function () {
-    return view('bmsdigital.pages.about.about');
-});
-
-Route::get('services', function () {
-    return view('bmsdigital.pages.services.services');
-});
-
-Route::get('service', function () {
-    return view('bmsdigital.pages.services.service');
-});
-
-Route::get('inscriptions', function () {
-    return view('bmsdigital.pages.inscriptions.inscriptions');
-});
-
-Route::get('contact', function () {
-    return view('bmsdigital.pages.contacts.contact');
-});
-
-Route::get('formation', function () {
-    return view('bmsdigital.pages.formations.formation');
-});
-
-Route::get('formations', function () {
-    return view('bmsdigital.pages.formations.formations');
-});
-
-Route::get('team', function () {
-    return view('bmsdigital.pages.team.team');
-});
-
-
-
-
-
-
-
 
 Route::name('bmsdigital.')->group(function(){
 
@@ -61,11 +18,12 @@ Route::name('bmsdigital.')->group(function(){
     Route::resource('services', ServiceController::class)->only('show','index');
     Route::resource('formations', FormationController::class)->only('show','index');
     Route::resource('contacts', ContactController::class)->only('index', 'store');
+    Route::resource('inscriptions', InscriptionController::class);
+    Route::resource('actualites', ActualitesController::class);
+    Route::get('about-blaise-mayamba', [HomeController::class,'about_blaise']);
 
 
 });
-
-
 
 
 Route::get('/dashboard', function () {

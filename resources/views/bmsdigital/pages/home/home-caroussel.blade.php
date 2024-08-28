@@ -1,6 +1,6 @@
 <div class="slider-area">
     <div class="hero-slider owl-carousel">
-            @foreach ($homes as $item)
+        @foreach ($homes as $item)
             <div class="single-slider" style="background-image: url({{ Voyager::image($item->image) }})">
                 <div class="hero-slider-content">
                     <h1>{!! $item->titre !!} </h1>
@@ -10,6 +10,6 @@
                     </div>
                 </div>
             </div>
-            @endforeach
-        </div>
+        @endforeach
+    </div>
 </div>

@@ -6,3 +6,4 @@
         <link rel="stylesheet" href="{{  asset('css/plugin.css') }}">
         <link rel="stylesheet" href="{{  asset('style.css') }}">
         <link rel="stylesheet" href="{{  asset('css/responsive.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/toastr.css') }}">

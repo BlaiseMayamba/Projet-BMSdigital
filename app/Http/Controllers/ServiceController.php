@@ -14,7 +14,8 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        //
+        $services = Service::orderByDesc('created_at')->get();
+        return view('bmsdigital.pages.services.services',compact('services'));
     }
 
     /**
@@ -44,9 +45,10 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function show(Service $service)
+    public function show($service)
     {
-        //
+        $service = Service::where('slug', $service)->firstOrFail();
+        return view('bmsdigital.pages.services.service',compact('service'));
     }
 
     /**

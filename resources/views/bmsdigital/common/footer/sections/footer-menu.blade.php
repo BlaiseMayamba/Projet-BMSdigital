@@ -1,11 +1,10 @@
 <div class="single-footer-widget">
-    <h3>Useful Links</h3>
+    <h3>Pages</h3>
     <ul class="footer-list">
-        <li><a href="#">Teachers &amp; Staff</a></li>
-        <li><a href="#">Our Courses</a></li>
-        <li><a href="#">Courses Categories</a></li>
-        <li><a href="#">Support</a></li>
-        <li><a href="#">Terms &amp; Conditions</a></li>
-        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Formations</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Apropos de nous</a></li>
     </ul>
 </div>

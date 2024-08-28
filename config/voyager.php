@@ -144,7 +144,9 @@ return [
         ],
 
         'widgets' => [
-
+            'App\\Widgets\\CandidatDimmer',
+            'App\\Widgets\\ServiceDimmer',
+            'App\\Widgets\\FormationDimmer',
         ],
 
     ],

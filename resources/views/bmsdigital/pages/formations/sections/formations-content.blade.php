@@ -1,40 +1,3 @@
-<div class="event-area section-padding bg-white event-page">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-title-wrapper">
-                    <div class="section-title">
-                        <h3>FORMATIONS EN COURS</h3>
-                        <p>Voici les formations qui sont déjà en cours:</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            @for ($i = 1; $i <= 3; $i++)
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-event-item event-style-2">
-                        <div class="single-event-image">
-                            <a href="formation">
-                                <img src="img/event/1.jpg" alt="">
-                                <span>15 Jun</span>
-                            </a>
-                        </div>
-                        <div class="single-event-text">
-                            <h3><a href="formation">Learn English in ease</a></h3>
-                            <div class="single-item-comment-view">
-                            <span><i class="zmdi zmdi-time"></i>4.00 pm - 8.00 pm</span>
-                            <span><i class="zmdi zmdi-pin"></i>Dhaka Bangladesh</span>
-                        </div>
-                        <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr sarata din megla....</p>
-                        <a class="button-default" href="formation">En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
-            @endfor
-        </div>
-    </div>
-</div>
 
 <div class="event-area section-padding bg-white event-page">
     <div class="container">
@@ -49,39 +12,41 @@
             </div>
         </div>
         <div class="row">
-            @for ($i = 1; $i <= 6; $i++)
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-event-item event-style-2">
-                        <div class="single-event-image">
-                            <a href="formation">
-                                <img src="img/event/1.jpg" alt="">
-                                <span>15 Jun</span>
-                            </a>
+            @foreach ($formations as $item)
+               <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="single-item mb-50">
+                        <div class="single-item-image overlay-effect">
+                            <a href="{{ route('bmsdigital.formations.show',$item) }}">
+                                <img src="{{ Voyager::image($item->image) }}" style="width:100%; height:300px;object-fit:cover" alt=""></a>
+                            <div class="courses-hover-info">
+                                <div class="courses-hover-action">
+                                    <div class="courses-hover-thumb">
+                                        <img src="{{ asset('img/bms.png') }}" style="width:50px; height:50px; object-fit:cover; border-radius:50px" alt="small images">
+                                    </div>
+                                    <h4><a href="#">Blaise Mayamba</a></h4>
+                                    <span class="crs-separator">/</span>
+                                    <p>Formateur</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="single-event-text">
-                            <h3><a href="formation">Learn English in ease</a></h3>
-                            <div class="single-item-comment-view">
-                            <span><i class="zmdi zmdi-time"></i>4.00 pm - 8.00 pm</span>
-                            <span><i class="zmdi zmdi-pin"></i>Dhaka Bangladesh</span>
-                        </div>
-                        <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr sarata din megla....</p>
-                        <a class="button-default" href="formation">Réservez une place</a>
+                        <div class="single-item-text">
+                            <h4><a href="{{ route('bmsdigital.inscriptions.show',$item) }}">{!! Helpers::cutText($item->titre, 100) !!}</a></h4>
+                            <p>{!! Helpers::cutText($item->contenu, 150) !!}</p>
+                            <div class="single-item-content">
+
+                               <div class="single-item-rating">
+                                   <a href="{{ route('bmsdigital.formations.show',$item) }}" class="button-default btn-sm">En savoir plus</a>
+                               </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            @endfor
+            @endforeach
         </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="pagination-content number">
-                    <ul class="pagination">
-                        <li><a href="#"><i class="zmdi zmdi-chevron-left"></i></a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li class="current"><a href="#"><i class="zmdi zmdi-chevron-right"></i></a></li>
-                    </ul>
+
                 </div>
             </div>
         </div>
